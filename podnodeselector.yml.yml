@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: podselector
+  labels:
+    zone: katowice
+spec:
+  containers:
+    - name: podselector
+      image: nginx
+      ports:
+        - containerPort: 80
+  nodeSelector:
+    zone: katowice
